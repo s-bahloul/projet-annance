@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+# chaque vues/index.php?routes = $_GET['routes']
+#vues/index.php?routes=le-mauvais-coin
+RewriteRule ^(.*)$ vues/index.php?url=$1 [QSA,L]
